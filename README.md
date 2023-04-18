@@ -11,7 +11,7 @@ Please fill out all of the following sections to help us grade your submission:
 
 ## Link to Site
 
-[Link: esqui049-hw2.netlify.app ](esqui049-hw2.netlify.app)
+[Link: esqui049-hw2.netlify.app ]((https://esqui049-hw2.netlify.app)
 
 ## Challenge Task
 
