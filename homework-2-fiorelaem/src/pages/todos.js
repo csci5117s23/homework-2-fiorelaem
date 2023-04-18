@@ -70,7 +70,7 @@ export default function ToDos() {
             <span class="text-left">
               {todo.task}
             </span>
-            <button class="completeBtn hover:bg-red-600 hover:border-white hover:text-white" onClick={() => {complete(todo);}}>X</button>
+            <span class="completeBtn hover:bg-red-600 hover:border-white hover:text-white" onClick={() => {complete(todo);}}>X</span>
           </li>
           </>
         }
