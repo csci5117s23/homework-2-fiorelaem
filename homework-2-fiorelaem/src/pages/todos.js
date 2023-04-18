@@ -58,12 +58,12 @@ export default function ToDos() {
 
   if (loading) {
     console.log(loading);
-    return <div className="loading bg-green-700"><span> Loading... </span></div>;
+    return <div className="loading bg-green-700 text-white text-4xl"><span> Loading... </span></div>;
   } 
   else {
     const todoListItems = todos.map((todo) => {
         if(todo.userId == userId && todo.completed == false) {
-          {todo.task = taskLength(todo);}
+          todo.task = taskLength(todo);
           return <>
           <li key={todo._id}>
             <span class="text-left">

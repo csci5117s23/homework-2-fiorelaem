@@ -62,7 +62,7 @@
 }
 
 li { 
-    background: rgb(208, 221, 208);
+    background: rgb(216, 226, 216);
     padding: 0.5em;
 }
-li:nth-child(odd) { background: rgb(222, 231, 209); }
+li:nth-child(odd) { background: rgb(190, 209, 200); }
