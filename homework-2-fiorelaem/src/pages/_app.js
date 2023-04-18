@@ -1,11 +1,12 @@
 // import '@/styles/globals.css'
+import '@/styles/myStyle.css'
+import "tailwindcss/tailwind.css";
 import { ClerkProvider, SignedIn, SignedOut, RedirectToSignIn } from '@clerk/nextjs'
 import { useRouter } from 'next/router';
 // import { redirect } from 'next/navigation';
 
 // pages that don't require a login
 const publicPages = ["/", "/sign-up"];
-
 
 export default function App({ Component, pageProps }) {
 
@@ -19,6 +20,7 @@ export default function App({ Component, pageProps }) {
   //   pathname.push('/todos');
   // }
   
+  // require login if page isn't public
   return (
     <ClerkProvider {...pageProps} >
       

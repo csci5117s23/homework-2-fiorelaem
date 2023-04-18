@@ -3,8 +3,13 @@ import { SignUp } from "@clerk/nextjs";
 
 export default function SignUpPage() {
     return<>
-        <h1>Fiorela's To-Do App</h1>
-        <SignUp path="/sign-up" routing="path" signInUrl="/" />
+        <div className= "container">
+            <h1>Fiorela's To-Do App</h1>
+            <h3>Sign-up to continue...</h3>
+            <div className="loginBox">
+                <SignUp path="/sign-up" routing="path" signInUrl="/" redirectUrl='todos'/>
+            </div>
+        </div>
     </>
 }
 
