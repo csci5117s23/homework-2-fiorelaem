@@ -7,7 +7,7 @@ import { UserButton } from "@clerk/clerk-react";
 
 export default function Nav() {
     return <>
-        <header class="bg-green-700 sm:flex sm:justify-between sm:items-center sm:px-4 sm:py-3">
+        <header class="bg-green-700 sm:flex sm:justify-between sm:items-center sm:px-4 sm:py-3 fixed w-full">
             <div class="flex items-center justify-between px-4 py-3 sm:p-0">
                 <span class="block px-2 py-1 text-white font-semibold rounded">CSCI5117 - Homework 2</span>
                 {/* <div class="sm:hidden">

@@ -33,7 +33,7 @@ export default function DonePage() {
         const todoListItems = todos.map((todo) => {
             if(todo.userId == userId && todo.completed == true) {
               return <>
-                <li key={todo._id}>
+                <li class="text-lg" key={todo._id}>
                     <span class="text-left">
                     {todo.task}
                     </span>
@@ -46,7 +46,7 @@ export default function DonePage() {
         return (
           <>
             <Nav></Nav>
-            <br></br>
+            <br></br><br></br><br></br><br></br>
             <ol>
             <div class="container bg-green-700">
             <p class="text-4xl text-white font-semibold">Completed Tasks</p>
@@ -55,6 +55,7 @@ export default function DonePage() {
                 {todoListItems}
               </div>
             </ol>
+            <br></br><br></br>
           </>
         );
     }

@@ -45,10 +45,10 @@ export default function ToDos() {
     setTodos(await getTodos(token));
   }
 
-  // check length of a task (max length is 100 chars)
+  // check length of a task (max length is 90 chars)
   function taskLength(todo) {
-    if(todo.task.length > 100) {
-      todo.task = todo.task.substring(0,100);
+    if(todo.task.length > 90) {
+      todo.task = todo.task.substring(0,90);
       todo.task += "...";
       return todo.task;
     }
@@ -66,8 +66,8 @@ export default function ToDos() {
         if(todo.userId == userId && todo.completed == false) {
           todo.task = taskLength(todo);
           return <>
-          <li key={todo._id}>
-            <span class="text-left">
+          <li class="hover:bg-gray-800 hover:text-white text-lg" key={todo._id}>
+            <span class="text-left ">
               {todo.task}
             </span>
             {/* this can't be a button - it doesn't work on netlify */}
@@ -81,7 +81,7 @@ export default function ToDos() {
     return (
       <>
         <Nav></Nav>
-        <br></br>
+        <br></br><br></br><br></br><br></br>
         <ol>
           <div class="container bg-green-700">
             <p class="text-4xl text-white font-semibold">Add a Task:</p>
@@ -105,6 +105,7 @@ export default function ToDos() {
             {todoListItems.reverse()}
           </div>
         </ol>
+        <br></br><br></br>
       </>
     );
   }
