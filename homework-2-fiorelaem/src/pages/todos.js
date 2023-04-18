@@ -94,11 +94,15 @@ export default function ToDos() {
               onChange={(e) => setNewName(e.target.value)}
               onKeyDown = {(e)=>{if (e.key === 'Enter'){add()}}}
             ></input>
-            <button class="flex-shrink-0 bg-green-700 hover:bg-gray-800 border-white hover:border-white text-sm border-2 text-white py-1 px-2 rounded mt-2" onClick={add}>Add</button>
+            <button 
+              class="flex-shrink-0 bg-green-700 hover:bg-gray-800 border-white hover:border-white text-sm border-2 text-white py-1 px-2 rounded mt-2 pr-10 pl-10" 
+              onClick={add}>
+              Add
+              </button>
           </div>
           {/* show list of tasks */}
           <div class="list mt-6">
-            {todoListItems}
+            {todoListItems.reverse()}
           </div>
         </ol>
       </>
