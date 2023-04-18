@@ -16,9 +16,10 @@ export default function Home() {
   //not logged in, so show login screen
   else{
     return <>
-      <div className= "container">
-        <h1>Fiorela's To-Do App</h1>
-        <h3>Login to continue...</h3>
+      <br></br>
+      <div className= "container bg-green-700">
+        <h1 class="text-white text-4xl">Fiorela's To-Do App</h1>
+        <h3 class="text-white">Login to continue...</h3><br></br>
         <div className="loginBox">
           <SignIn path="/" routing="path" signUpUrl="/sign-up" redirectUrl='todos'/>
         </div>

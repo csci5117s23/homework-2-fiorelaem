@@ -61,16 +61,17 @@ export default function ToDos() {
     return <div className="loading bg-green-700 text-white text-4xl"><span> Loading... </span></div>;
   } 
   else {
+    // make each task into a li
     const todoListItems = todos.map((todo) => {
         if(todo.userId == userId && todo.completed == false) {
           todo.task = taskLength(todo);
-          console.log("task: ", todo.task);
           return <>
           <li key={todo._id}>
             <span class="text-left">
               {todo.task}
             </span>
-            <span class="completeBtn hover:bg-red-600 hover:border-white hover:text-white" onClick={() => {complete(todo);}}>X</span>
+            {/* this can't be a button - it doesn't work on netlify */}
+            <span class="completeBtn hover:bg-red-600 hover:border-white hover:text-white" onClick={() => {complete(todo);}}>X</span> 
           </li>
           </>
         }
@@ -80,12 +81,12 @@ export default function ToDos() {
     return (
       <>
         <Nav></Nav>
-        {/* <UserButton afterSignOutUrl="/"/> */}
         <br></br>
         <ol>
           <div class="container bg-green-700">
             <p class="text-4xl text-white font-semibold">Add a Task:</p>
             <br></br>
+            {/* add a task form*/}
             <input
               class="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               placeholder="Task description..."
@@ -95,6 +96,7 @@ export default function ToDos() {
             ></input>
             <button class="flex-shrink-0 bg-green-700 hover:bg-gray-800 border-white hover:border-white text-sm border-2 text-white py-1 px-2 rounded mt-2" onClick={add}>Add</button>
           </div>
+          {/* show list of tasks */}
           <div class="list mt-6">
             {todoListItems}
           </div>

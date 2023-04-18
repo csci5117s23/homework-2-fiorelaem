@@ -5,13 +5,12 @@ import { useAuth } from "@clerk/nextjs";
 import React, { useState, useEffect, useCallback } from "react";
 
 
-export default function ToDos() {
+export default function DonePage() {
 
     const [loading, setLoading] = useState(true);
     const [todos, setTodos] = useState([]);
     const { isLoaded, userId, sessionId, getToken } = useAuth();
 
-    const [newName, setNewName] = useState("");
 
     // get to-do list
     useEffect(() => {
@@ -24,6 +23,7 @@ export default function ToDos() {
         }
         process();
     }, [isLoaded]);
+
 
     if (loading) {
         console.log(loading);
