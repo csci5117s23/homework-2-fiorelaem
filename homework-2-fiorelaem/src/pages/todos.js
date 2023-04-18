@@ -56,11 +56,11 @@ export default function ToDos() {
   }
 
 
-  if (loading) {
-    console.log(loading);
-    return <div className="loading bg-green-700 text-white text-4xl"><span> Loading... </span></div>;
-  } 
-  else {
+  // if (loading) {
+  //   console.log(loading);
+  //   return <div className="loading bg-green-700 text-white text-4xl"><span> Loading... </span></div>;
+  // } 
+  // else {
     const todoListItems = todos.map((todo) => {
         if(todo.userId == userId && todo.completed == false) {
           todo.task = taskLength(todo);
@@ -100,5 +100,5 @@ export default function ToDos() {
         </ol>
       </>
     );
-  }
+  // }
 }
