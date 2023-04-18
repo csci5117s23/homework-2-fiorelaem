@@ -64,6 +64,7 @@ export default function ToDos() {
     const todoListItems = todos.map((todo) => {
         if(todo.userId == userId && todo.completed == false) {
           todo.task = taskLength(todo);
+          console.log("task: ", todo.task);
           return <>
           <li key={todo._id}>
             <span class="text-left">
